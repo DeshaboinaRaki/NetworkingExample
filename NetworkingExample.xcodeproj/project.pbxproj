@@ -13,6 +13,12 @@
 		35B80CC02966BEB600E1CBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B80CBE2966BEB600E1CBBD /* Main.storyboard */; };
 		35B80CC22966BEBA00E1CBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B80CC12966BEBA00E1CBBD /* Assets.xcassets */; };
 		35B80CC52966BEBA00E1CBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B80CC32966BEBA00E1CBBD /* LaunchScreen.storyboard */; };
+		35B80CD32966C30500E1CBBD /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CD22966C30500E1CBBD /* CardModel.swift */; };
+		35B80CD52966C31500E1CBBD /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CD42966C31500E1CBBD /* CardViewModel.swift */; };
+		35B80CD72966C33000E1CBBD /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CD62966C33000E1CBBD /* CardTableViewCell.swift */; };
+		35B80CD92966C34900E1CBBD /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CD82966C34900E1CBBD /* CardViewController.swift */; };
+		35B80CDE2966CA9400E1CBBD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CDD2966CA9400E1CBBD /* APIService.swift */; };
+		35B80CE02966CAA100E1CBBD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B80CDF2966CAA100E1CBBD /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		35B80CC12966BEBA00E1CBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35B80CC42966BEBA00E1CBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35B80CC62966BEBA00E1CBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B80CD22966C30500E1CBBD /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		35B80CD42966C31500E1CBBD /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		35B80CD62966C33000E1CBBD /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		35B80CD82966C34900E1CBBD /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		35B80CDD2966CA9400E1CBBD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		35B80CDF2966CAA100E1CBBD /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		35B80CB72966BEB600E1CBBD /* NetworkingExample */ = {
 			isa = PBXGroup;
 			children = (
+				35B80CCC2966C29D00E1CBBD /* MVVM */,
 				35B80CB82966BEB600E1CBBD /* AppDelegate.swift */,
 				35B80CBA2966BEB600E1CBBD /* SceneDelegate.swift */,
 				35B80CBC2966BEB600E1CBBD /* ViewController.swift */,
@@ -65,6 +78,75 @@
 				35B80CC62966BEBA00E1CBBD /* Info.plist */,
 			);
 			path = NetworkingExample;
+			sourceTree = "<group>";
+		};
+		35B80CCC2966C29D00E1CBBD /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CDA2966CA3D00E1CBBD /* Helper */,
+				35B80CCD2966C2AB00E1CBBD /* Card */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		35B80CCD2966C2AB00E1CBBD /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CD12966C2EB00E1CBBD /* ViewController */,
+				35B80CD02966C2E100E1CBBD /* View */,
+				35B80CCF2966C2D700E1CBBD /* ViewModel */,
+				35B80CCE2966C2D000E1CBBD /* Model */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		35B80CCE2966C2D000E1CBBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CD22966C30500E1CBBD /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35B80CCF2966C2D700E1CBBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CD42966C31500E1CBBD /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		35B80CD02966C2E100E1CBBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CD62966C33000E1CBBD /* CardTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35B80CD12966C2EB00E1CBBD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CD82966C34900E1CBBD /* CardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		35B80CDA2966CA3D00E1CBBD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CDB2966CA5B00E1CBBD /* APINetwork */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		35B80CDB2966CA5B00E1CBBD /* APINetwork */ = {
+			isa = PBXGroup;
+			children = (
+				35B80CDD2966CA9400E1CBBD /* APIService.swift */,
+				35B80CDF2966CAA100E1CBBD /* APIManager.swift */,
+			);
+			path = APINetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +221,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B80CBD2966BEB600E1CBBD /* ViewController.swift in Sources */,
+				35B80CD92966C34900E1CBBD /* CardViewController.swift in Sources */,
+				35B80CD72966C33000E1CBBD /* CardTableViewCell.swift in Sources */,
+				35B80CE02966CAA100E1CBBD /* APIManager.swift in Sources */,
+				35B80CD32966C30500E1CBBD /* CardModel.swift in Sources */,
 				35B80CB92966BEB600E1CBBD /* AppDelegate.swift in Sources */,
 				35B80CBB2966BEB600E1CBBD /* SceneDelegate.swift in Sources */,
+				35B80CDE2966CA9400E1CBBD /* APIService.swift in Sources */,
+				35B80CD52966C31500E1CBBD /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
